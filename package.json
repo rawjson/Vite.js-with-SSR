@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "SET NODE_ENV=development & node server/index.js",
+    "dev": "set NODE_ENV=development && node server/index.js",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
     "generate": "vite build --outDir dist/static && npm run build:server && node prerender",
-    "serve": "SET NODE_ENV=production & node server",
+    "serve": "set NODE_ENV=production && node server",
     "debug": "node --inspect-brk server",
     "pretty": "prettier --write ."
   },
